@@ -1,0 +1,600 @@
+{
+	"info": {
+		"_postman_id": "38ae91eb-cfb8-4ce7-a364-f01cb3acaf0e",
+		"name": "TestTask01 (NodeJs)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "get all records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/categories?join=parent",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "join",
+									"value": "parent"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/v1/categories?join=parent",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "join",
+											"value": "parent"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1224"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c8-xrCwToYOBfmphA+uesOfREOCY5s\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Sep 2022 13:40:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"18d5be73-2961-4309-9599-6b03921ba3c4\",\n        \"created_at\": \"2022-09-08T11:29:54.348Z\",\n        \"updated_at\": \"2022-09-08T11:29:54.348Z\",\n        \"name\": \"Cars\",\n        \"children\": [\n            {\n                \"id\": \"a2e35695-de4f-4cbd-99d6-6e47e0efcc5a\",\n                \"created_at\": \"2022-09-08T11:31:52.415Z\",\n                \"updated_at\": \"2022-09-08T11:31:52.415Z\",\n                \"name\": \"Tata\"\n            }\n        ],\n        \"parent\": null\n    },\n    {\n        \"id\": \"a2e35695-de4f-4cbd-99d6-6e47e0efcc5a\",\n        \"created_at\": \"2022-09-08T11:31:52.415Z\",\n        \"updated_at\": \"2022-09-08T11:31:52.415Z\",\n        \"name\": \"Tata\",\n        \"children\": [\n            {\n                \"id\": \"ccc672a2-6a9c-4d36-a6ff-379743724812\",\n                \"created_at\": \"2022-09-08T11:32:41.511Z\",\n                \"updated_at\": \"2022-09-08T11:32:41.511Z\",\n                \"name\": \"Nexon\"\n            }\n        ],\n        \"parent\": {\n            \"id\": \"18d5be73-2961-4309-9599-6b03921ba3c4\",\n            \"created_at\": \"2022-09-08T11:29:54.348Z\",\n            \"updated_at\": \"2022-09-08T11:29:54.348Z\",\n            \"name\": \"Cars\"\n        }\n    },\n    {\n        \"id\": \"ccc672a2-6a9c-4d36-a6ff-379743724812\",\n        \"created_at\": \"2022-09-08T11:32:41.511Z\",\n        \"updated_at\": \"2022-09-08T11:32:41.511Z\",\n        \"name\": \"Nexon\",\n        \"children\": [],\n        \"parent\": {\n            \"id\": \"a2e35695-de4f-4cbd-99d6-6e47e0efcc5a\",\n            \"created_at\": \"2022-09-08T11:31:52.415Z\",\n            \"updated_at\": \"2022-09-08T11:31:52.415Z\",\n            \"name\": \"Tata\"\n        }\n    },\n    {\n        \"id\": \"e2ee054c-ed0f-4f1f-86ea-cfbe99df2a08\",\n        \"created_at\": \"2022-09-08T11:30:42.639Z\",\n        \"updated_at\": \"2022-09-08T11:30:42.639Z\",\n        \"name\": \"Honda\",\n        \"children\": [],\n        \"parent\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get records in tree format",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/categories/tree",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"tree"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/v1/categories/tree",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										"tree"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "943"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3af-vmyefu7GjkcXC06NN7ud8DjrR9I\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Sep 2022 13:41:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"18d5be73-2961-4309-9599-6b03921ba3c4\",\n        \"created_at\": \"2022-09-08T11:29:54.348Z\",\n        \"updated_at\": \"2022-09-08T11:29:54.348Z\",\n        \"name\": \"Cars\",\n        \"parent\": null,\n        \"children\": [\n            {\n                \"id\": \"a2e35695-de4f-4cbd-99d6-6e47e0efcc5a\",\n                \"created_at\": \"2022-09-08T11:31:52.415Z\",\n                \"updated_at\": \"2022-09-08T11:31:52.415Z\",\n                \"name\": \"Tata\",\n                \"parent\": {\n                    \"id\": \"18d5be73-2961-4309-9599-6b03921ba3c4\",\n                    \"created_at\": \"2022-09-08T11:29:54.348Z\",\n                    \"updated_at\": \"2022-09-08T11:29:54.348Z\",\n                    \"name\": \"Cars\"\n                },\n                \"children\": [\n                    {\n                        \"id\": \"ccc672a2-6a9c-4d36-a6ff-379743724812\",\n                        \"created_at\": \"2022-09-08T11:32:41.511Z\",\n                        \"updated_at\": \"2022-09-08T11:32:41.511Z\",\n                        \"name\": \"Nexon\",\n                        \"parent\": {\n                            \"id\": \"a2e35695-de4f-4cbd-99d6-6e47e0efcc5a\",\n                            \"created_at\": \"2022-09-08T11:31:52.415Z\",\n                            \"updated_at\": \"2022-09-08T11:31:52.415Z\",\n                            \"name\": \"Tata\"\n                        },\n                        \"children\": []\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"id\": \"e2ee054c-ed0f-4f1f-86ea-cfbe99df2a08\",\n        \"created_at\": \"2022-09-08T11:30:42.639Z\",\n        \"updated_at\": \"2022-09-08T11:30:42.639Z\",\n        \"name\": \"Honda\",\n        \"parent\": null,\n        \"children\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "create record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/v1/categories",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success (parent record)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Electronic\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/v1/categories",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "159"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9f-h7sB0HJsw2XWESV2UChXNydM/7o\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Sep 2022 13:42:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"12e0e8f6-9e79-4183-9a46-ffd20d330e42\",\n    \"created_at\": \"2022-09-08T13:42:24.373Z\",\n    \"updated_at\": \"2022-09-08T13:42:24.373Z\",\n    \"name\": \"Electronic\",\n    \"children\": []\n}"
+						},
+						{
+							"name": "success (child record)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"TV\",\n    \"parent\": {\n        \"id\": \"12e0e8f6-9e79-4183-9a46-ffd20d330e42\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/v1/categories",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "151"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"97-fOTg69PTAyeFIkTukcbe2G8U+hY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Sep 2022 13:43:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6e2f60a8-c262-4f9d-a741-ffd1230e748a\",\n    \"created_at\": \"2022-09-08T13:43:22.235Z\",\n    \"updated_at\": \"2022-09-08T13:43:22.235Z\",\n    \"name\": \"TV\",\n    \"children\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/v1/products",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3317"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cf5-WX0BcHEsmJPGz2cPta6gE6UqsMU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Sep 2022 13:46:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"1e7e3f1d-72e9-4ddf-bac0-ad8d35b064ec\",\n        \"created_at\": \"2022-09-08T11:54:45.898Z\",\n        \"updated_at\": \"2022-09-08T11:54:45.898Z\",\n        \"name\": \"XZ\",\n        \"description\": \"Petrol version\",\n        \"category\": {\n            \"id\": \"ccc672a2-6a9c-4d36-a6ff-379743724812\",\n            \"created_at\": \"2022-09-08T11:32:41.511Z\",\n            \"updated_at\": \"2022-09-08T11:32:41.511Z\",\n            \"name\": \"Nexon\"\n        }\n    },\n    {\n        \"id\": \"54114875-e6a0-4cc8-9a7e-9f2ba9189f31\",\n        \"created_at\": \"2022-09-08T13:06:17.526Z\",\n        \"updated_at\": \"2022-09-08T13:06:17.526Z\",\n        \"name\": \"Product 2\",\n        \"description\": \"General description\",\n        \"category\": {\n            \"id\": \"18d5be73-2961-4309-9599-6b03921ba3c4\",\n            \"created_at\": \"2022-09-08T11:29:54.348Z\",\n            \"updated_at\": \"2022-09-08T11:29:54.348Z\",\n            \"name\": \"Cars\"\n        }\n    },\n    {\n        \"id\": \"c76aa401-5d0a-42fd-a50d-d3fae97e7142\",\n        \"created_at\": \"2022-09-08T13:06:32.626Z\",\n        \"updated_at\": \"2022-09-08T13:06:32.626Z\",\n        \"name\": \"Product 3\",\n        \"description\": \"General description\",\n        \"category\": {\n            \"id\": \"a2e35695-de4f-4cbd-99d6-6e47e0efcc5a\",\n            \"created_at\": \"2022-09-08T11:31:52.415Z\",\n            \"updated_at\": \"2022-09-08T11:31:52.415Z\",\n            \"name\": \"Tata\"\n        }\n    },\n    {\n        \"id\": \"72ba221c-772e-4d2f-aeef-af5dc9085947\",\n        \"created_at\": \"2022-09-08T13:06:37.381Z\",\n        \"updated_at\": \"2022-09-08T13:06:37.381Z\",\n        \"name\": \"Product 4\",\n        \"description\": \"General description\",\n        \"category\": {\n            \"id\": \"a2e35695-de4f-4cbd-99d6-6e47e0efcc5a\",\n            \"created_at\": \"2022-09-08T11:31:52.415Z\",\n            \"updated_at\": \"2022-09-08T11:31:52.415Z\",\n            \"name\": \"Tata\"\n        }\n    },\n    {\n        \"id\": \"1cbdd47d-cfee-4623-9b0e-1923acdad9eb\",\n        \"created_at\": \"2022-09-08T13:06:55.214Z\",\n        \"updated_at\": \"2022-09-08T13:06:55.214Z\",\n        \"name\": \"Product 5\",\n        \"description\": \"General description\",\n        \"category\": {\n            \"id\": \"e2ee054c-ed0f-4f1f-86ea-cfbe99df2a08\",\n            \"created_at\": \"2022-09-08T11:30:42.639Z\",\n            \"updated_at\": \"2022-09-08T11:30:42.639Z\",\n            \"name\": \"Honda\"\n        }\n    },\n    {\n        \"id\": \"2a61bddd-051e-4a8d-af96-365f35fbe6a4\",\n        \"created_at\": \"2022-09-08T13:06:59.619Z\",\n        \"updated_at\": \"2022-09-08T13:06:59.619Z\",\n        \"name\": \"Product 6\",\n        \"description\": \"General description\",\n        \"category\": {\n            \"id\": \"e2ee054c-ed0f-4f1f-86ea-cfbe99df2a08\",\n            \"created_at\": \"2022-09-08T11:30:42.639Z\",\n            \"updated_at\": \"2022-09-08T11:30:42.639Z\",\n            \"name\": \"Honda\"\n        }\n    },\n    {\n        \"id\": \"99da4291-25de-4225-8bf4-7a664ce376e9\",\n        \"created_at\": \"2022-09-08T13:07:13.532Z\",\n        \"updated_at\": \"2022-09-08T13:07:13.532Z\",\n        \"name\": \"Product 7\",\n        \"description\": \"General description\",\n        \"category\": {\n            \"id\": \"ccc672a2-6a9c-4d36-a6ff-379743724812\",\n            \"created_at\": \"2022-09-08T11:32:41.511Z\",\n            \"updated_at\": \"2022-09-08T11:32:41.511Z\",\n            \"name\": \"Nexon\"\n        }\n    },\n    {\n        \"id\": \"0472ac17-d543-4870-ac8d-8217b34c34fb\",\n        \"created_at\": \"2022-09-08T13:07:17.962Z\",\n        \"updated_at\": \"2022-09-08T13:07:17.962Z\",\n        \"name\": \"Product 8\",\n        \"description\": \"General description\",\n        \"category\": {\n            \"id\": \"ccc672a2-6a9c-4d36-a6ff-379743724812\",\n            \"created_at\": \"2022-09-08T11:32:41.511Z\",\n            \"updated_at\": \"2022-09-08T11:32:41.511Z\",\n            \"name\": \"Nexon\"\n        }\n    },\n    {\n        \"id\": \"5aa08e33-bda2-4bf7-b1ab-c97ed11d2f9c\",\n        \"created_at\": \"2022-09-08T13:07:22.213Z\",\n        \"updated_at\": \"2022-09-08T13:07:22.213Z\",\n        \"name\": \"Product 9\",\n        \"description\": \"General description\",\n        \"category\": {\n            \"id\": \"ccc672a2-6a9c-4d36-a6ff-379743724812\",\n            \"created_at\": \"2022-09-08T11:32:41.511Z\",\n            \"updated_at\": \"2022-09-08T11:32:41.511Z\",\n            \"name\": \"Nexon\"\n        }\n    },\n    {\n        \"id\": \"efe34fbf-bf1e-440e-8e66-b6d4dfe661ed\",\n        \"created_at\": \"2022-09-08T13:07:26.778Z\",\n        \"updated_at\": \"2022-09-08T13:07:26.778Z\",\n        \"name\": \"Product 10\",\n        \"description\": \"General description\",\n        \"category\": {\n            \"id\": \"ccc672a2-6a9c-4d36-a6ff-379743724812\",\n            \"created_at\": \"2022-09-08T11:32:41.511Z\",\n            \"updated_at\": \"2022-09-08T11:32:41.511Z\",\n            \"name\": \"Nexon\"\n        }\n    }\n]"
+						},
+						{
+							"name": "success (filter by category)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/v1/products?filter=category.id||$eq||a2e35695-de4f-4cbd-99d6-6e47e0efcc5a",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products"
+									],
+									"query": [
+										{
+											"key": "filter",
+											"value": "category.id||$eq||a2e35695-de4f-4cbd-99d6-6e47e0efcc5a"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "665"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"299-Ad2+n0rJywt+Ow05e1JqhKTSZqc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Sep 2022 13:48:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"c76aa401-5d0a-42fd-a50d-d3fae97e7142\",\n        \"created_at\": \"2022-09-08T13:06:32.626Z\",\n        \"updated_at\": \"2022-09-08T13:06:32.626Z\",\n        \"name\": \"Product 3\",\n        \"description\": \"General description\",\n        \"category\": {\n            \"id\": \"a2e35695-de4f-4cbd-99d6-6e47e0efcc5a\",\n            \"created_at\": \"2022-09-08T11:31:52.415Z\",\n            \"updated_at\": \"2022-09-08T11:31:52.415Z\",\n            \"name\": \"Tata\"\n        }\n    },\n    {\n        \"id\": \"72ba221c-772e-4d2f-aeef-af5dc9085947\",\n        \"created_at\": \"2022-09-08T13:06:37.381Z\",\n        \"updated_at\": \"2022-09-08T13:06:37.381Z\",\n        \"name\": \"Product 4\",\n        \"description\": \"General description\",\n        \"category\": {\n            \"id\": \"a2e35695-de4f-4cbd-99d6-6e47e0efcc5a\",\n            \"created_at\": \"2022-09-08T11:31:52.415Z\",\n            \"updated_at\": \"2022-09-08T11:31:52.415Z\",\n            \"name\": \"Tata\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "create record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/v1/products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"LG LED 32 Inches\",\n    \"description\":\"32 inches LED TV with magic remote\",\n    \"category\":\"99f6a40d-243f-49d8-8abe-e13981cf110d\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/v1/products",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "352"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"160-lqbHXTYwKoYh/EfUpJf1s06EV9U\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Sep 2022 13:50:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"b6ff067d-fdbd-40c7-ab7f-51e4a18b59c3\",\n    \"created_at\": \"2022-09-08T13:50:54.766Z\",\n    \"updated_at\": \"2022-09-08T13:50:54.766Z\",\n    \"name\": \"LG LED 32 Inches\",\n    \"description\": \"32 inches LED TV with magic remote\",\n    \"category\": {\n        \"id\": \"99f6a40d-243f-49d8-8abe-e13981cf110d\",\n        \"created_at\": \"2022-09-08T13:44:56.435Z\",\n        \"updated_at\": \"2022-09-08T13:44:56.435Z\",\n        \"name\": \"LED\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000"
+		}
+	]
+}
